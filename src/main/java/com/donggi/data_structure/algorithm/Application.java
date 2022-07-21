@@ -34,6 +34,18 @@ public class Application {
         String strA = String.valueOf(a);
         int digit = strA.length();
         System.out.printf("그 수 자리는 %d 입니다",digit);
+
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("정수를 입력하세요:");
+        int x = scanner.nextInt();
+        System.out.println(x + "의 팩토리얼은"+factorial(x)+"입니다.");
+    }
+    static int factorial(int n){
+        if(n>0)
+            return n*factorial(n-1);
+        else
+            return 1;
     }
 
 }
